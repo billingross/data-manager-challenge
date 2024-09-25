@@ -18,10 +18,11 @@ def get_allele_count(genotype, allele):
 info_columns = ['#CHROM','POS','ID','REF','ALT','QUAL','FILTER','INFO','FORMAT']
 input_directory = "exercise_input_data_public"
 
+### Read, parse, and clean input data
+# Find tsv files
 tsv_files =  glob.glob(f"{input_directory}/*.tsv.gz")
 print(f"Found {len(tsv_files)} input files.")
 
-### Read, parse, and clean input data
 # Read every TSV file into a dataframe
 tsv_frames = [pd.read_csv(tsv, compression='gzip', header=0, sep='\t') for tsv in tsv_files]
 
