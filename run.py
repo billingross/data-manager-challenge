@@ -53,7 +53,6 @@ allele_count_df.columns = ['major_count', 'minor_count']
 allele_count_df.to_csv("allele_counts.tsv", sep='\t', index_label="sample_id")
 ###
 
-
 ### Subset and save new files
 # Create output directory
 Path("output").mkdir(parents=False, exist_ok=True)
